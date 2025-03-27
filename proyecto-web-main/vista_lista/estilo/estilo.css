@@ -1,0 +1,185 @@
+/* Reset básico */
+* {
+  margin: 0;  /* Elimina márgenes predeterminados de todos los elementos */
+  padding: 0; /* Elimina el relleno predeterminado */
+  box-sizing: border-box; /* Hace que width y height incluyan padding y border */
+}
+
+body {
+  font-family: Arial, sans-serif; /* Fuente de texto */
+  background-color: #ffffff; /* Fondo blanco */
+  color: #000000; /* Texto negro */
+}
+
+/* Barra rosa superior */
+.barra-rosa {
+  background-color: #FF4D7E; /* Color rosa */
+  height: 8px; /* Altura de la barra */
+  width: 100%; /* Ocupar todo el ancho de la pantalla */
+}
+
+/* Barra morada que contiene logo, menú y búsqueda */
+.barra-purpura {
+  background-color: #32129a; /* Color morado */
+  display: flex; /* Usa flexbox para organizar elementos en línea */
+  align-items: center; /* Alinear elementos verticalmente */
+  justify-content: space-between; /* Espaciado máximo entre elementos */
+  padding: 10px 50px; /* ↑↓ Espaciado vertical: 30px | ←→ Espaciado horizontal: 50px */
+  /* ↑ Aumenta el primer valor para más espacio arriba y abajo, 
+     el segundo valor para mover elementos hacia los lados */
+}
+
+.logo-institucion img {
+  height: 70px; /* Tamaño del logo */
+  /* ↑ Aumenta para hacer el logo más grande */
+}
+
+/* Menú principal (Oferta académica, Contacto, Edcore) */
+.menu-principal {
+  display: flex; /* Organiza los botones en línea */
+  align-items: center;
+  gap: 100px; /* Espacio entre botones */
+  /* ↑ Aumenta para separarlos más, reduce para acercarlos */
+}
+
+.menu-principal button {
+  background: none;
+  border: none;
+  color: #ffffff; /* Color de texto */
+  font-size: 16px; /* Tamaño del texto */
+  cursor: pointer;
+}
+
+.menu-principal button:hover {
+  text-decoration: underline; /* Subraya el texto cuando el cursor pasa sobre él */
+}
+
+/* Ícono de búsqueda en la esquina derecha (botón con fondo blanco y bordes redondeados) */
+.icono-busqueda button {
+  background-color: #32129a;
+  border: 1px solid #cccccc;
+  border-radius: 35px;
+  padding: 3px 100px 3px 70px; /* Changed: less padding on left (20px), keep right padding (100px) */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.icono-busqueda img {
+  width: 18px; /* Tamaño del ícono */
+  height: auto;
+  transform: translateY(-50%);
+  transform: translateX(-300%);
+}
+
+/* Fila con ícono de retroceso e ícono de búsqueda adicional */
+.fila-busqueda {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 16px;
+  background-color: #f7f7f7;
+  text-align: center;
+  gap: 20px;
+}
+.fila-busqueda h2{
+  flex: 1;
+  text-align: center;
+}
+
+.btn-volver {
+  width: 32px;  /* Increased from 24px to 32px to make it larger */
+  height: auto; 
+  cursor: pointer;
+  padding: 5px;  
+}
+
+.btn-volver img {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+}
+
+.btn-buscar {
+  background-color: #cccccc;
+  border-radius: 35px;
+  padding: 15px 20px 15px 50px;
+  width: 120px;
+  position: relative;
+  border: 1px solid #32129a;
+  text-align: center;
+}
+
+.btn-buscar img {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+}
+
+.btn-buscar img {
+  width: 24px; /* Tamaño del ícono de lupa */
+  height: 24px;
+}
+
+/* Contenedor de empresas, con scroll si son muchas */
+.contenedor-empresas {
+  max-height: 650px; /* Altura máxima antes de que aparezca el scroll */
+  overflow-y: auto; /* Permite desplazamiento vertical si hay muchas empresas */
+  padding: 16px; /* Espaciado interno */
+  display: flex; /* Usa flexbox para organizar las burbujas */
+  flex-direction: column; /* Asegura que las burbujas estén en columna */
+  align-items: center; /* Centra las burbujas verticalmente */
+  justify-content: center; /* Centra las burbujas horizontalmente */
+}
+
+.empresa {
+  display: flex; /* Organiza el contenido en línea */
+  align-items: center; /* Centra verticalmente */
+  background-color: #E0E0E0; /* Fondo gris claro */
+  border-radius: 35px; /* Bordes redondeados */
+  padding: 10px 20px; /* ↑↓ Espaciado interno: 10px | ←→ Espaciado lateral: 20px */
+  margin-bottom: 10px; /* Separación entre burbujas */
+  gap: 10px; /* Espacio entre elementos dentro de la burbuja */
+  max-width: 1000px; /* Limita el tamaño máximo de la burbuja */
+  width: 100%; /* Asegura que ocupe el 100% del espacio disponible hasta el límite */
+}
+
+.logo-empresa {
+  width: 50px; /* Ancho de la imagen del logo */
+  height: 50px; /* Alto de la imagen */
+  object-fit: contain; /* Ajusta la imagen dentro del cuadro */
+}
+
+/* Botón de nombre de la empresa */
+.empresa button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px; /* Tamaño del texto */
+  color: #000000;
+  text-align: left;
+  flex: 1; /* Esto asegura que el texto ocupe el espacio disponible, pero limitado por max-width */
+}
+
+/* Scrollbar (opcional, para navegadores basados en WebKit) */
+.contenedor-empresas::-webkit-scrollbar {
+  width: 8px; /* Ancho de la barra de desplazamiento */
+}
+.contenedor-empresas::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Color del fondo de la barra de desplazamiento */
+}
+.contenedor-empresas::-webkit-scrollbar-thumb {
+  background: #888; /* Color del "thumb" de la barra */
+}
+.contenedor-empresas::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Cambia de color al pasar el cursor */
+}
+
