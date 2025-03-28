@@ -183,3 +183,115 @@ body {
   background: #555; /* Cambia de color al pasar el cursor */
 }
 
+/* Estilos del Footer */
+.footer {
+  background-color: #39383b;
+  margin-top: 40px;
+  padding: 40px 0;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-img {
+  display: flex;
+  align-items: center;
+}
+
+.footer-img img {
+  width: 250px;
+  height: auto;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px; /* Ajustado desde gap-4 de Tailwind */
+}
+
+.footer-links .footer-img img {
+  width: 80px;
+  height: auto;
+  margin: 0 20px;
+}
+
+.footer-text-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px; /* Ajustado desde gap-2 de Tailwind */
+}
+
+.footer-link {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.extra-info {
+  padding: 20px 0;
+  margin-top: 20px;
+  color: white;
+  text-align: center;
+}
+
+.extra-info .additional-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-top: -10px;
+  height: 100%;
+}
+
+.extra-info .additional-images img {
+  width: auto;
+  height: 60px;
+  object-fit: cover;
+}
+
+/* Media Queries para Responsividad del Footer */
+@media (max-width: 600px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-img img {
+    max-width: 150px;
+  }
+  
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-links .footer-img img {
+    width: 20px;
+  }
+  
+  .footer-text-links {
+    gap: 10px;
+  }
+
+  .footer-link {
+    font-size: 16px;
+  }
+
+  .extra-info .additional-images {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .extra-info .additional-images img {
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+  }
+}
