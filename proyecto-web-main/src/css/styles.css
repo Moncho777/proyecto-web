@@ -126,6 +126,25 @@ body {
   .toolbar {
     justify-content: space-between !important;
     gap: 10px !important;
+    align-items: center;
+  }
+  
+  .home-icon {
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .imgJalisco {
+    max-width: 150px;
+    z-index: 1;
+  }
+}
+@media (max-width: 600px) {
+  .toolbar {
+    justify-content: space-between !important;
+    gap: 10px !important;
   }
   .toolbar {
     justify-content: space-between !important;

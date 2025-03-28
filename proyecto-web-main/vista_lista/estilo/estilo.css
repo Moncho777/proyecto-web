@@ -18,28 +18,52 @@ body {
   width: 100%; /* Ocupar todo el ancho de la pantalla */
 }
 
-/* Barra morada que contiene logo, menú y búsqueda */
+
+/* Barra morada que contiene logo y menú */
 .barra-purpura {
-  background-color: #32129a; /* Color morado */
-  display: flex; /* Usa flexbox para organizar elementos en línea */
-  align-items: center; /* Alinear elementos verticalmente */
-  justify-content: space-between; /* Espaciado máximo entre elementos */
-  padding: 10px 50px; /* ↑↓ Espaciado vertical: 30px | ←→ Espaciado horizontal: 50px */
-  /* ↑ Aumenta el primer valor para más espacio arriba y abajo, 
-     el segundo valor para mover elementos hacia los lados */
+  background-color: #32129a;
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  padding: 10px 50px; 
+}
+
+/* Menú principal (Modulos, Contacto, Edcore) */
+.menu-principal {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Media query for responsive views */
+@media (max-width: 768px) {
+  .barra-purpura {
+    padding: 10px 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .menu-principal {
+    gap: 30px;
+    margin: 10px 0;
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 .logo-institucion img {
-  height: 70px; /* Tamaño del logo */
-  /* ↑ Aumenta para hacer el logo más grande */
+  height: 70px; 
+  
 }
 
-/* Menú principal (Oferta académica, Contacto, Edcore) */
+
 .menu-principal {
-  display: flex; /* Organiza los botones en línea */
+  display: flex; 
   align-items: center;
-  gap: 100px; /* Espacio entre botones */
-  /* ↑ Aumenta para separarlos más, reduce para acercarlos */
+  gap: 100px; 
+ 
 }
 
 .menu-principal button {
@@ -78,31 +102,41 @@ body {
 .fila-busqueda {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
   padding: 16px;
   background-color: #f7f7f7;
-  text-align: center;
-  gap: 20px;
+  position: relative;
 }
-.fila-busqueda h2{
+
+.fila-busqueda h2 {
   flex: 1;
   text-align: center;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.botones-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  z-index: 1;
 }
 
 .btn-volver {
-  width: 32px;  /* Increased from 24px to 32px to make it larger */
-  height: auto; 
+  width: 32px;
+  height: auto;
   cursor: pointer;
-  padding: 5px;  
+  padding: 5px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
 }
 
-.btn-volver img {
-  position: absolute;
-  left: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 24px;
-  height: 24px;
+.btn-volver:hover {
+  background-color: #cccccc;
+  transform: scale(1.1);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
 .btn-buscar {
@@ -124,6 +158,31 @@ body {
   height: 24px;
 }
 
+@media (max-width: 576px) {
+  .fila-busqueda {
+    flex-direction: column;
+    padding: 15px;
+    align-items: center;
+  }
+  
+  .fila-busqueda h2 {
+    position: static;
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+    width: 100%;
+    order: -1;
+  }
+  
+  .botones-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+  }
+}
 .btn-buscar img {
   width: 24px; /* Tamaño del ícono de lupa */
   height: 24px;
@@ -131,59 +190,87 @@ body {
 
 /* Contenedor de empresas, con scroll si son muchas */
 .contenedor-empresas {
-  max-height: 650px; /* Altura máxima antes de que aparezca el scroll */
-  overflow-y: auto; /* Permite desplazamiento vertical si hay muchas empresas */
-  padding: 16px; /* Espaciado interno */
-  display: flex; /* Usa flexbox para organizar las burbujas */
-  flex-direction: column; /* Asegura que las burbujas estén en columna */
-  align-items: center; /* Centra las burbujas verticalmente */
-  justify-content: center; /* Centra las burbujas horizontalmente */
+  
+  padding: 16px; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
 }
 
 .empresa {
-  display: flex; /* Organiza el contenido en línea */
-  align-items: center; /* Centra verticalmente */
-  background-color: #E0E0E0; /* Fondo gris claro */
-  border-radius: 35px; /* Bordes redondeados */
-  padding: 10px 20px; /* ↑↓ Espaciado interno: 10px | ←→ Espaciado lateral: 20px */
-  margin-bottom: 10px; /* Separación entre burbujas */
-  gap: 10px; /* Espacio entre elementos dentro de la burbuja */
-  max-width: 1000px; /* Limita el tamaño máximo de la burbuja */
-  width: 100%; /* Asegura que ocupe el 100% del espacio disponible hasta el límite */
+  display: flex; 
+  align-items: center;
+  background-color: #E0E0E0; 
+  border-radius: 35px; 
+  padding: 10px 20px;
+  margin-bottom: 10px; 
+  gap: 10px; 
+  max-width: 1000px; 
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.empresa:hover {
+  background-color: #32129a;
+  transform: translateX(5px);
+}
+
+.empresa:hover .empresa-nombre {
+  color: white;
+}
+
+.empresa-nombre {
+  font-size: 16px;
+  color: #000000;
+  flex: 1;
+  transition: color 0.3s ease;
 }
 
 .logo-empresa {
-  width: 50px; /* Ancho de la imagen del logo */
-  height: 50px; /* Alto de la imagen */
-  object-fit: contain; /* Ajusta la imagen dentro del cuadro */
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
 }
 
-/* Botón de nombre de la empresa */
+
 .empresa button {
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 16px; /* Tamaño del texto */
+  font-size: 16px;
   color: #000000;
   text-align: left;
-  flex: 1; /* Esto asegura que el texto ocupe el espacio disponible, pero limitado por max-width */
+  flex: 1;
+  transition: all 0.3s ease; /* Add smooth transition */
+  padding: 8px 12px;
+  border-radius: 4px;
 }
 
-/* Scrollbar (opcional, para navegadores basados en WebKit) */
+.empresa button:hover {
+  background-color: #32129a;
+  color: white;
+  transform: translateX(5px);
+}
+
+
 .contenedor-empresas::-webkit-scrollbar {
-  width: 8px; /* Ancho de la barra de desplazamiento */
+  width: 8px; 
 }
 .contenedor-empresas::-webkit-scrollbar-track {
-  background: #f0f0f0; /* Color del fondo de la barra de desplazamiento */
+  background: #f0f0f0; 
 }
 .contenedor-empresas::-webkit-scrollbar-thumb {
-  background: #888; /* Color del "thumb" de la barra */
+  background: #888; 
 }
 .contenedor-empresas::-webkit-scrollbar-thumb:hover {
-  background: #555; /* Cambia de color al pasar el cursor */
+  background: #555; 
 }
 
-/* Estilos del Footer */
+
 .footer {
   background-color: #39383b;
   margin-top: 40px;
@@ -211,7 +298,7 @@ body {
 
 .footer-links {
   display: flex;
-  gap: 20px; /* Ajustado desde gap-4 de Tailwind */
+  gap: 20px; 
 }
 
 .footer-links .footer-img img {
@@ -224,7 +311,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px; /* Ajustado desde gap-2 de Tailwind */
+  gap: 8px; 
 }
 
 .footer-link {
@@ -245,7 +332,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: 80px; 
   margin-top: -10px;
   height: 100%;
 }
@@ -256,7 +343,155 @@ body {
   object-fit: cover;
 }
 
-/* Media Queries para Responsividad del Footer */
+/* Media Queries para Responsividad */
+@media (max-width: 1024px) {
+  .barra-purpura {
+    padding: 10px 30px;
+  }
+  
+  .menu-principal {
+    gap: 50px;
+  }
+  
+  .icono-busqueda button {
+    padding: 3px 60px 3px 40px;
+  }
+  
+  .empresa {
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .barra-purpura {
+    padding: 10px 20px;
+    flex-wrap: wrap;
+  }
+  
+  .menu-principal {
+    gap: 30px;
+    margin: 10px 0;
+    justify-content: center;
+    width: 100%;
+    order: 3;
+  }
+  
+  .logo-institucion {
+    order: 1;
+  }
+  
+  .icono-busqueda {
+    order: 2;
+  }
+  
+  .icono-busqueda button {
+    padding: 8px 15px 8px 40px;
+    min-width: 120px;
+    min-height: 40px;
+    position: relative;
+  }
+  
+  .icono-busqueda img {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 0;
+  }
+  
+  .empresa {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 576px) {
+  .barra-purpura {
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .logo-institucion {
+    margin-bottom: 10px;
+  }
+  
+  .menu-principal {
+    gap: 15px;
+    margin-bottom: 10px;
+  }
+  
+  .icono-busqueda button {
+    padding: 8px 15px 8px 40px;
+    min-width: 150px;
+    min-height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+  }
+  
+  .icono-busqueda img {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .fila-busqueda {
+    flex-direction: column;
+    padding: 15px;
+    align-items: center;
+  }
+  
+  .fila-busqueda h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+    width: 100%;
+    order: -1;
+  }
+  
+  .botones-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+  }
+  
+  .btn-volver {
+    width: 40px;
+    height: 40px;
+    position: static;
+  }
+  
+  .btn-buscar {
+    width: 150px;
+  }
+  
+  .empresa {
+    max-width: 100%;
+    padding: 8px 15px;
+  }
+  
+  .logo-empresa {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .empresa button {
+    font-size: 14px;
+  }
+  
+  .contenedor-empresas {
+    padding: 10px;
+  }
+}
+
+/* Responsividad del Footer */
 @media (max-width: 600px) {
   .footer-container {
     flex-direction: column;
@@ -286,12 +521,12 @@ body {
 
   .extra-info .additional-images {
     flex-direction: column;
-    gap: 20px;
+    gap: 40px; /* Increased from 20px to 40px for more spacing in mobile view */
   }
   
   .extra-info .additional-images img {
-    width: 80%;
-    max-width: 300px;
-    height: auto;
+    width: 292px;
+    height: 60px;
+    object-fit: contain;
   }
 }

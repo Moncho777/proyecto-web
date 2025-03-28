@@ -16,30 +16,70 @@
   height: auto; 
   cursor: pointer;
   padding: 5px;
-}
-
-.btn-volver img {
+  border-radius: 50%;
+  transition: all 0.3s ease;
   position: absolute;
-  left: 15px;
+  left: 20px;
   top: 50%;
   transform: translateY(-50%);
-  width: 24px;
-  height: 24px;
+}
+
+.btn-volver:hover {
+  background-color: #cccccc;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
 
-@media (min-width: 601px) {
-  .desktop-nav {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-  }
-  .menu-button, .imgHome {
-    display: none;
-  }
+
+/* Add responsive positioning for the header section */
+.oferta {
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.oferta .w-full {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 60px;
 }
 
 @media (max-width: 600px) {
+  .btn-volver {
+    left: 10px;
+    width: 28px;
+  }
+  
+  .oferta {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  
+  .text-convenios {
+    font-size: 1.75rem !important;
+  }
+  
+  /* Reduce top margin on mobile to bring content closer to header */
+  .w-full.p-4.mt-\[164px\] {
+    margin-top: 120px !important;
+  }
+  
+  /* Adjust card container padding to reduce extra space */
+  .cards-container {
+    padding-top: 0;
+  }
+}
+
+/* Adjust desktop margin as well for consistency */
+@media (min-width: 601px) {
+  .w-full.p-4.mt-\[164px\] {
+    margin-top: 140px !important;
+  }
+}
+@media (min-width: 601px) {
   .desktop-nav {
     display: none;
   }
@@ -307,105 +347,7 @@ img {
   max-width: 1200px;
   margin: 0 auto;
 }
-.card {
-  width: 360px;
-  height: 500px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: hidden;
-  border-radius: 20px;
-  margin-bottom: 20px;
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.3s ease, box-shadow 0.3s;
-  
-}
-.card:hover {
-  box-shadow: 0 10px 20px #0003;
-  transform: scale(1.05);
-}
-.ing-sistemas {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-.card-text {
-  font-family: "Poppins", sans-serif !important;
-  width: 100%;
-  height: 35%;
-  background: white;
-  color: var(--text-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  font-weight: 800;
-  text-align: center;
-  margin: 0 0 4px;
-  white-space: normal;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  word-wrap: break-word;
-}
-.card::after {
-  content: "";
-  position: absolute;
-  bottom: -50px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  height: 80px;
-  background: rgba(255, 255, 255, 1);
-  border-radius: 0 0 20px 20px;
-}
-.corner-box-top {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  height: 55px;
-  width: 55px;
-  background-color: var(--box-color-orange);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-}
-.corner-logo {
-  width: 90%;
-  height: auto;
-  object-fit: contain;
-}
-.corner-box {
-  position: absolute;
-  bottom: 125px;
-  left: 0px;
-  height: 16px;
-  width: 100px;
-  background-color: var(--box-color-orange);
-}
-.corner-box-green {
-  position: absolute;
-  bottom: 125px;
-  left: 0px;
-  height: 16px;
-  width: 100px;
-  background-color: var(--box-color-green);
-}
-.corner-box-top-green {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  height: 55px;
-  width: 55px;
-  background-color: var(--box-color-green);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-}
+
 .footer {
   background-color: #39383b; 
   margin-top: 40px; 
