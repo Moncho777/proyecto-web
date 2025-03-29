@@ -74,3 +74,81 @@ body {
     height: 0.25rem;
     background-color: #68d391;
 }
+
+/* Estilos para los indicadores de pasos */
+.step-indicator {
+    position: relative;
+    padding-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.step-indicator span {
+    color: #9CA3AF;
+    transition: color 0.3s ease;
+}
+
+.step-indicator.active span {
+    color: #32129A;
+}
+
+.step-indicator.completed span {
+    color: #32129A;
+}
+
+.step-indicator::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #32129A;
+    transition: width 0.3s ease;
+}
+
+.step-indicator.active::after,
+.step-indicator.completed::after {
+    width: 100%;
+}
+
+/* Animación para cambio de pasos */
+.step-transition {
+    animation: fadeStep 0.5s ease-in-out;
+}
+
+@keyframes fadeStep {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Estilos para botones */
+.btn-primary {
+    background-color: #32129A;
+    border-color: #32129A;
+}
+
+.btn-primary:hover {
+    color: #32129A;
+}
+
+.btn-primary:focus {
+    color: #32129A;
+}
+
+
+/* Estilos para inputs */
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #32129A;
+    box-shadow: 0 0 0 2px rgba(50, 18, 154, 0.2);
+}
+
+/* Estilos para el botón de seleccionar archivo */
+.file-input-label {
+    color: #32129A;
+    border-color: #32129A;
+}
+
+.file-input-label:hover {
+    background-color: rgba(50, 18, 154, 0.05);
+}
