@@ -42,17 +42,26 @@
                 <div class="up-header"></div>
                 <div class="flex flex-wrap justify-center items-center w-full mx-auto">
                     <div class="toolbar flex w-full justify-center items-center mx-auto gap-20">
-                        <div class="imgJalisco"> <img src="assets/images/logo/Grupo_10491.svg" alt="Imagen Jalisco" class="logo-navbar no-styles" tabindex="0" /> </div> <img src="assets/images/logo/home.svg" alt="Imagen Home" class="logo-navbar no-styles home-icon" tabindex="0" />
-                        <div class="desktop-nav">
-                            <p class="text-white texto-inter">Unidades académicas</p>
-                            <p class="text-white texto-inter">Contacto</p>
+                        <div class="imgJalisco"> <img src="assets/images/logo/Grupo_10491.svg" alt="Imagen Jalisco" class="logo-navbar no-styles" tabindex="0" /> </div> 
+                                        <a href="index.php"><img src="assets/images/logo/home.svg" alt="Imagen Home" class="logo-navbar no-styles home-icon" tabindex="0" /></a>
+                                        <div class="desktop-nav">
+                            <a href="unidades.html" class="text-white texto-inter">Visitantes</a>
+                            <a href="contacto.html" class="text-white texto-inter">Servicio social</a>
+                            <a href="contacto.html" class="text-white texto-inter">Prestamo de balones</a>
+                            <a href="contacto.html" class="text-white texto-inter">Biblioteca</a>
+                            <a href="contacto.html" class="text-white texto-inter">Residencias</a>
+                            <a href="contacto.html" class="text-white texto-inter">Materías</a>
                             <a href="#" class="text-login text-white texto-inter" id="loginDesktopBtn">Iniciar Sesión</a>
                         </div> <button id="menuBtn" class="menu-button"> <img src="assets/images/logo/menu-svgrepo-com.svg" alt="Menu" class="logo-navbar no-styles" /> </button>
                     </div> <!-- menu panel -->
                     <div id="menuPanel" class="menu-panel">
                         <div class="menu-content">
-                            <p class="menu-item">Unidades académicas</p>
-                            <p class="menu-item">Contacto</p>
+                            <a href="unidades.html" class="menu-item">Visitantes</a>
+                            <a href="contacto.html" class="menu-item">Servicio social</a>
+                            <a href="unidades.html" class="menu-item">Prestamo de balones</a>
+                            <a href="contacto.html" class="menu-item">Biblioteca</a>
+                            <a href="contacto.html" class="menu-item">Residencias</a>
+                            <a href="contacto.html" class="menu-item">Materías</a>
                             <a href="#" class="menu-item" id="loginMobileBtn">Iniciar Sesión</a>
                         </div>
                     </div>
