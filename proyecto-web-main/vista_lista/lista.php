@@ -12,7 +12,7 @@
 
   <header class="barra-purpura">
     <div class="logo-institucion">
-      <img src="/proyecto-web-main/assets/images/logo/Grupo_10491.svg" alt="Tecnológico Superior de Jalisco" />   
+      <img src="images/Grupo_10491.svg" alt="Tecnológico Superior de Jalisco" />   
     </div>
 
     <nav class="menu-principal">
@@ -25,7 +25,7 @@
   <div class="fila-busqueda">
     <h2>Lista de convenios</h2>
     <div class="botones-container">
-      <img src="img/icono-regresar.png" alt="Volver" class="btn-volver" onclick="window.location.href='../index.html'" />
+      <img src="img/icono-regresar.png" alt="Volver" class="btn-volver" onclick="window.location.href='../index.php'" />
       <button class="btn-buscar">
         <img src="img/icono-lupa1.png" alt="Buscar" />
       </button>
@@ -33,44 +33,44 @@
   </div>
 
   <main class="contenedor-empresas">
-    <button class="empresa" onclick="window.location.href='../vista_empresa/index.html'">
+    <button class="empresa" onclick="window.location.href='../vista_empresa/index.php'">
       <img src="img/logo-oracle.png" alt="TURBO" class="logo-empresa" />
       <span class="empresa-nombre">Nombre de la empresa</span>
     </button>
-    <button class="empresa" onclick="window.location.href='../vista_empresa/index.html'">
+    <button class="empresa" onclick="window.location.href='../vista_empresa/index.php'">
       <img src="img/logo-oracle.png" alt="TURBO" class="logo-empresa" />
       <span class="empresa-nombre">Nombre de la empresa</span>
     </button>
-    <button class="empresa" onclick="window.location.href='../vista_empresa/index.html'">
+    <button class="empresa" onclick="window.location.href='../vista_empresa/index.php'">
       <img src="img/logo-oracle.png" alt="TURBO" class="logo-empresa" />
       <span class="empresa-nombre">Nombre de la empresa</span>
     </button>
     <!-- Más ejemplos para probar el scroll -->
-    <button class="empresa" onclick="window.location.href='../vista_empresa/index.html'">
+    <button class="empresa" onclick="window.location.href='../vista_empresa/index.php'">
       <img src="img/logo-oracle.png" alt="TURBO" class="logo-empresa" />
       <span class="empresa-nombre">Nombre de la empresa</span>
     </button>
-    <button class="empresa" onclick="window.location.href='../vista_empresa/index.html'">
+    <button class="empresa" onclick="window.location.href='../vista_empresa/index.php'">
       <img src="img/logo-oracle.png" alt="TURBO" class="logo-empresa" />
       <span class="empresa-nombre">Nombre de la empresa</span>
     </button>
-    <button class="empresa" onclick="window.location.href='../vista_empresa/index.html'">
+    <button class="empresa" onclick="window.location.href='../vista_empresa/index.php'">
       <img src="img/logo-oracle.png" alt="TURBO" class="logo-empresa" />
       <span class="empresa-nombre">Nombre de la empresa</span>
     </button>
-    <button class="empresa" onclick="window.location.href='../vista_empresa/index.html'">
+    <button class="empresa" onclick="window.location.href='../vista_empresa/index.php'">
       <img src="img/logo-oracle.png" alt="TURBO" class="logo-empresa" />
       <span class="empresa-nombre">Nombre de la empresa</span>
     </button>
-    <button class="empresa" onclick="window.location.href='../vista_empresa/index.html'">
+    <button class="empresa" onclick="window.location.href='../vista_empresa/index.php'">
       <img src="img/logo-oracle.png" alt="TURBO" class="logo-empresa" />
       <span class="empresa-nombre">Nombre de la empresa</span>
     </button>
-    <button class="empresa" onclick="window.location.href='../vista_empresa/index.html'">
+    <button class="empresa" onclick="window.location.href='../vista_empresa/index.php'">
       <img src="img/logo-oracle.png" alt="TURBO" class="logo-empresa" />
       <span class="empresa-nombre">Nombre de la empresa</span>
     </button>
-    <button class="empresa" onclick="window.location.href='../vista_empresa/index.html'">
+    <button class="empresa" onclick="window.location.href='../vista_empresa/index.php'">
       <img src="img/logo-oracle.png" alt="TURBO" class="logo-empresa" />
       <span class="empresa-nombre">Nombre de la empresa</span>
     </button>

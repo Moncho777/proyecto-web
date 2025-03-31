@@ -9,13 +9,13 @@
 </head>
 <body class="bg-gray-100 min-h-screen flex items-center justify-center p-4 relative">
     <div class="absolute inset-0 z-0">
-        <img src="/proyecto-web-main/assets/images/logo/imagenes/chapala01-2.webp" alt="Chapala" class="w-full h-full object-cover">
+        <img src="/proyecto-web/proyecto-web-main/assets/images/logo/imagenes/chapala01-2.webp" alt="Chapala" class="w-full h-full object-cover">
         <div class="absolute inset-0 bg-black bg-opacity-40 backdrop-blur-sm"></div>
     </div>
     
     <div class="bg-white rounded-lg shadow-lg p-8 w-full max-w-2xl relative z-10">
         <div class="flex items-center justify-center mb-4">
-            <img src="/proyecto-web-main/assets/images/logo/favicon.png" alt="Logo" class="h-20 w-auto">
+            <img src="/proyecto-web/proyecto-web-main/assets/images/logo/favicon.png" alt="Logo" class="h-20 w-auto">
             <div class="ml-3 text-sm leading-tight" style="color: #32129A;">
                 <p class="font-bold">Tecnologico</p>
                 <p class="font-bold">Superior</p>
@@ -50,7 +50,7 @@
             </div>
         </div>
         
-        <form id="convenioForm" class="space-y-6">
+        <form action="guardarConvenio.php" id="convenioForm" class="space-y-6" method="POST" enctype="multipart/form-data">
             <!-- Paso 1: Información básica -->
             <div id="step1" class="space-y-6">
                 <!-- Nombre de la empresa -->
@@ -69,6 +69,12 @@
                         <option value="servicioSocial">Servicio Social</option>
                         <option value="practicas">Prácticas</option>
                     </select>
+                </div>
+
+                <div>
+                    <label for="vencimiento" class="block text-sm font-medium text-gray-700 mb-1">Fecha de vencimiento</label>
+                    <input type="date" id="vencimiento" name="vencimiento" required
+                        class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none">
                 </div>
 
                 <!-- Persona de contacto -->

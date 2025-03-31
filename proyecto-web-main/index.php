@@ -30,8 +30,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
     <link rel="icon" type="image/png" href="assets/images/logo/favicon.png" />
-    <link href="/proyecto-web-main/src/output.css" rel="stylesheet" />
-    <link href="/proyecto-web-main/src/css/styles.css" rel="stylesheet" />
+    <link href="src/output.css" rel="stylesheet" />
+    <link href="src/css/styles.css" rel="stylesheet" />
     <title>Convenios</title>
 </head>
 
@@ -76,7 +76,7 @@
             <div class="corner-box-top"> <img src="assets/images/logo/gear-svgrepo-com_copy.svg" alt="Logo" class="corner-logo" /> </div> <img class="ing-sistemas" src="assets/images/logo/imagenes/DSC02687_1.webp" alt="Tres personas trabajando en un proyecto de electrónica con componentes y un portátil, mientras en el fondo se muestra código en una pantalla grande." width="400" height="300" loading="lazy" />
             <div class="card-text">Ingeniería Mecatrónica</div>
             <div class="corner-box"></div>
-        </a> <a href="vista_lista/lista.html" class="card">
+        </a> <a href="vista_lista/lista.php" class="card">
             <div class="corner-box-top"> <img src="assets/images/logo/gear-svgrepo-com_copy.svg" alt="Logo" class="corner-logo" /> </div> <img class="ing-sistemas" src="assets/images/logo/imagenes/DSC04199_1.webp" alt="Estudiantes trabajando en una sala de computadoras con equipos iMac, mientras dos de ellos colaboran revisando un libro y una laptop." width="400" height="300" loading="lazy" />
             <div class="card-text">Ingeniería en Sistemas Computacionales</div>
             <div class="corner-box"></div>
@@ -104,7 +104,7 @@
     <div class="extra-info w-full p-6 bg-gray-800 text-white text-center">
         <div class="additional-images"> <img src="assets/images/logo/imagenes/educacion.png" alt="Logo de la secretaria de educacion publica" loading="lazy" /> <img src="assets/images/logo/imagenes/tecnologico.svg" alt="logo del tecnologico nacional de mexico" loading="lazy" /> <img src="assets/images/logo/imagenes/innovacion.png" alt="" loading="lazy" /> <img src="assets/images/logo/imagenes/jalisco.png" alt="logo del gobierno de jalisco" loading="lazy" /> </div>
     </div>
-    <script src="/proyecto-web-main/src/js/script.js"></script>
+    <script src="src/js/script.js"></script>
 </body>
 </html>
 
@@ -154,7 +154,6 @@
                 </div>
             </div>
             <button type="submit" class="login-button">Acceder</button>
-
         </form>
     </div>
 </div>

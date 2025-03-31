@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  form.addEventListener("submit", (e) => {
+  /*form.addEventListener("submit", (e) => {
     e.preventDefault();
     
     setTimeout(() => {
@@ -111,6 +111,8 @@ document.addEventListener("DOMContentLoaded", () => {
       step2Indicator.classList.remove("active");
       step1Indicator.classList.add("active");
     }, 1000);
-  });
+  });*/
+
+
 });
 

@@ -33,8 +33,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
     <link rel="icon" type="image/png" href="assets/images/logo/favicon.png" />
-    <link href="src/output.css" rel="stylesheet" />
-    <link href="src/css/styles.css" rel="stylesheet" />
+    <link href="/proyecto-web/proyecto-web-main/vista_empresa/src/output.css" rel="stylesheet" />
+    <link href="/proyecto-web/proyecto-web-main/vista_empresa/src/css/styles.css" rel="stylesheet" />
     <title>Convenios</title>
 </head>
 
@@ -54,7 +54,7 @@
                     <div id="menuPanel" class="menu-panel">
                         <div class="menu-content">
                             <p class="menu-item">Unidades académicas</p>
-                            <p class="menu-item">Contacto</p> <a href="src/pages/login/login.html" class="menu-item">Iniciar Sesión</a>
+                            <p class="menu-item">Contacto</p>
                         </div>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
     <div class="w-full p-4 mt-[164px]" style="background-color: #f5f5f5">
         <div class="oferta" title="Convenios">
             <div class="w-full relative py-2" style="background-color: #f5f5f5">
-                <img src="assets/images/logo/imagenes/icono-regresar.png" alt="Volver" class="btn-volver" onclick="window.location.href='../vista_lista/lista.html'"/>
+                <img src="assets/images/logo/imagenes/icono-regresar.png" alt="Volver" class="btn-volver" onclick="window.location.href='../vista_lista/lista.php'"/>
                 <h5 class="text-convenios font-bold text-4xl text-base_blue-500"> Acerca de </h5>
             </div>
         </div>
@@ -87,6 +87,7 @@
                         <p><strong>Contacto:</strong></p>
                         <p><strong>Teléfono:</strong></p>
                         <p><strong>Ubicación:</strong></p>
+                        <P><strong>Fecha de vencimiento:</strong></P>
                     </div>
                     
                     <!-- Redes sociales -->
@@ -124,6 +125,6 @@
     <div class="extra-info w-full p-6 bg-gray-800 text-white text-center">
         <div class="additional-images"> <img src="assets/images/logo/imagenes/educacion.png" alt="Logo de la secretaria de educacion publica" loading="lazy" /> <img src="assets/images/logo/imagenes/tecnologico.svg" alt="logo del tecnologico nacional de mexico" loading="lazy" /> <img src="assets/images/logo/imagenes/innovacion.png" alt="" loading="lazy" /> <img src="assets/images/logo/imagenes/jalisco.png" alt="logo del gobierno de jalisco" loading="lazy" /> </div>
     </div>
-    <script src="/proyecto-web-main/src/js/script.js"></script>
+    <script src="/proyecto-web/proyecto-web-main/src/js/script.js"></script>
 </body>
 </html>
