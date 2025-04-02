@@ -149,6 +149,6 @@
 <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.colVis.min.js"></script>
 
 <!-- Your custom script -->
-<script src="js/script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
