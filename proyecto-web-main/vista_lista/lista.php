@@ -6,6 +6,8 @@
   <title>Lista de Convenios</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="estilo/estilo.css">
+  <!-- DataTables CSS -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.min.css">
 </head>
 <body>
   <div class="barra-rosa"></div>
@@ -26,55 +28,80 @@
     <h2>Lista de convenios</h2>
     <div class="botones-container">
       <img src="img/icono-regresar.png" alt="Volver" class="btn-volver" onclick="window.location.href='../index.php'" />
-      <button class="btn-buscar">
-        <img src="img/icono-lupa1.png" alt="Buscar" />
-      </button>
+      <!-- Search button removed -->
     </div>
   </div>
 
-  <main class="contenedor-empresas">
-    <button class="empresa" onclick="window.location.href='../vista_empresa/index.php'">
-      <img src="img/logo-oracle.png" alt="TURBO" class="logo-empresa" />
-      <span class="empresa-nombre">Nombre de la empresa</span>
-    </button>
-    <button class="empresa" onclick="window.location.href='../vista_empresa/index.php'">
-      <img src="img/logo-oracle.png" alt="TURBO" class="logo-empresa" />
-      <span class="empresa-nombre">Nombre de la empresa</span>
-    </button>
-    <button class="empresa" onclick="window.location.href='../vista_empresa/index.php'">
-      <img src="img/logo-oracle.png" alt="TURBO" class="logo-empresa" />
-      <span class="empresa-nombre">Nombre de la empresa</span>
-    </button>
-    <!-- Más ejemplos para probar el scroll -->
-    <button class="empresa" onclick="window.location.href='../vista_empresa/index.php'">
-      <img src="img/logo-oracle.png" alt="TURBO" class="logo-empresa" />
-      <span class="empresa-nombre">Nombre de la empresa</span>
-    </button>
-    <button class="empresa" onclick="window.location.href='../vista_empresa/index.php'">
-      <img src="img/logo-oracle.png" alt="TURBO" class="logo-empresa" />
-      <span class="empresa-nombre">Nombre de la empresa</span>
-    </button>
-    <button class="empresa" onclick="window.location.href='../vista_empresa/index.php'">
-      <img src="img/logo-oracle.png" alt="TURBO" class="logo-empresa" />
-      <span class="empresa-nombre">Nombre de la empresa</span>
-    </button>
-    <button class="empresa" onclick="window.location.href='../vista_empresa/index.php'">
-      <img src="img/logo-oracle.png" alt="TURBO" class="logo-empresa" />
-      <span class="empresa-nombre">Nombre de la empresa</span>
-    </button>
-    <button class="empresa" onclick="window.location.href='../vista_empresa/index.php'">
-      <img src="img/logo-oracle.png" alt="TURBO" class="logo-empresa" />
-      <span class="empresa-nombre">Nombre de la empresa</span>
-    </button>
-    <button class="empresa" onclick="window.location.href='../vista_empresa/index.php'">
-      <img src="img/logo-oracle.png" alt="TURBO" class="logo-empresa" />
-      <span class="empresa-nombre">Nombre de la empresa</span>
-    </button>
-    <button class="empresa" onclick="window.location.href='../vista_empresa/index.php'">
-      <img src="img/logo-oracle.png" alt="TURBO" class="logo-empresa" />
-      <span class="empresa-nombre">Nombre de la empresa</span>
-    </button>
-  </main>
+  <!-- Add a container div for better styling -->
+  <div class="datatable-container">
+    <table id="example" class="display table table-striped table-bordered" cellspacing="0" width="100%">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Logo</th>
+          <th>Fecha de vencimiento</th>
+          <th>Buscar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Row:1 Cell:1</td>
+          <td>Row:1 Cell:2</td>
+          <td>Row:1 Cell:3</td>
+          <td>Row:1 Cell:4</td>
+        </tr>
+        <tr>
+          <td>Row:2 Cell:1</td>
+          <td>Row:2 Cell:2</td>
+          <td>Row:2 Cell:3</td>
+          <td>Row:2 Cell:4</td>
+        </tr>
+        <tr>
+          <td>Row:3 Cell:1</td>
+          <td>Row:3 Cell:2</td>
+          <td>Row:3 Cell:3</td>
+          <td>Row:3 Cell:4</td>
+        </tr>
+        <tr>
+          <td>Row:4 Cell:1</td>
+          <td>Row:4 Cell:2</td>
+          <td>Row:4 Cell:3</td>
+          <td>Row:4 Cell:4</td>
+        </tr>
+        <tr>
+          <td>Row:5 Cell:1</td>
+          <td>Row:5 Cell:2</td>
+          <td>Row:5 Cell:3</td>
+          <td>Row:5 Cell:4</td>
+        </tr>
+        <tr>
+          <td>Row:6 Cell:1</td>
+          <td>Row:6 Cell:2</td>
+          <td>Row:6 Cell:3</td>
+          <td>Row:6 Cell:4</td>
+        </tr>
+        <tr>
+          <td>Row:7 Cell:1</td>
+          <td>Row:7 Cell:2</td>
+          <td>Row:7 Cell:3</td>
+          <td>Row:7 Cell:4</td>
+        </tr>
+        <tr>
+          <td>Row:8 Cell:1</td>
+          <td>Row:8 Cell:2</td>
+          <td>Row:8 Cell:3</td>
+          <td>Row:8 Cell:4</td>
+        </tr>
+        <tr>
+          <td>Row:9 Cell:1</td>
+          <td>Row:9 Cell:2</td>
+          <td>Row:9 Cell:3</td>
+          <td>Row:9 Cell:4</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+    
   <!-- Footer -->
 <div class="footer w-full p-10">
   <div class="footer-container flex justify-between items-center">
@@ -104,5 +131,24 @@
       <img src="images/jalisco.png" alt="logo del gobierno de jalisco" loading="lazy" />
   </div>
 </div>
+
+<!-- jQuery must be loaded BEFORE DataTables -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!-- DataTables Core -->
+<script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+
+<!-- DataTables Buttons and required extensions -->
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.colVis.min.js"></script>
+
+<!-- Your custom script -->
+<script src="js/script.js"></script>
 </body>
 </html>
