@@ -1,3 +1,9 @@
+<?php
+include("../src/pages/conexion.php");
+
+$sql = "SELECT * FROM convenios";
+$resultado = $conn->query($sql);
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,6 +14,11 @@
   <link rel="stylesheet" href="estilo/estilo.css">
   <!-- DataTables CSS -->
   <link rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.min.css">
+  <style>
+    .clickable-row td {
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
   <div class="barra-rosa"></div>
@@ -37,67 +48,44 @@
     <table id="example" class="display table table-striped table-bordered" cellspacing="0" width="100%">
       <thead>
         <tr>
+          <th>Id</th>
           <th>Nombre</th>
-          <th>Logo</th>
-          <th>Fecha de vencimiento</th>
-          <th>Buscar</th>
+          <th>Convenio</th>
+          <th>Marca</th>
+          <th>Contacto</th>
+          <th>Telefono</th>
+          <th>Correo</th>
+          <th>Vencimeinto</th>
+          
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Row:1 Cell:1</td>
-          <td>Row:1 Cell:2</td>
-          <td>Row:1 Cell:3</td>
-          <td>Row:1 Cell:4</td>
+      
+      <?php
+            if ($resultado->num_rows > 0) {
+                while ($fila = $resultado->fetch_assoc()) {
+          ?>
+
+<tr onclick="window.location.href='../vista_empresa/index.php?id=<?php echo $fila["id"]; ?>'">
+          <td><?php echo $fila["id"]; ?></td>
+          <td><?php echo $fila["nombre"]; ?></td>
+          <td><?php echo $fila["convenio"]; ?></td>
+          <td><img src='<?php echo "../src/pages/".str_replace("../", "", $fila["logo"]); ?>' width="50px"/></td>
+          <td><?php echo $fila["contacto"]; ?></td>
+          <td><?php echo $fila["telefono"]; ?></td>
+          <td><?php echo $fila["correo"]; ?></td>
+          <td><?php echo date('d/m/Y', strtotime($fila["vencimiento"])); ?></td>   
         </tr>
-        <tr>
-          <td>Row:2 Cell:1</td>
-          <td>Row:2 Cell:2</td>
-          <td>Row:2 Cell:3</td>
-          <td>Row:2 Cell:4</td>
-        </tr>
-        <tr>
-          <td>Row:3 Cell:1</td>
-          <td>Row:3 Cell:2</td>
-          <td>Row:3 Cell:3</td>
-          <td>Row:3 Cell:4</td>
-        </tr>
-        <tr>
-          <td>Row:4 Cell:1</td>
-          <td>Row:4 Cell:2</td>
-          <td>Row:4 Cell:3</td>
-          <td>Row:4 Cell:4</td>
-        </tr>
-        <tr>
-          <td>Row:5 Cell:1</td>
-          <td>Row:5 Cell:2</td>
-          <td>Row:5 Cell:3</td>
-          <td>Row:5 Cell:4</td>
-        </tr>
-        <tr>
-          <td>Row:6 Cell:1</td>
-          <td>Row:6 Cell:2</td>
-          <td>Row:6 Cell:3</td>
-          <td>Row:6 Cell:4</td>
-        </tr>
-        <tr>
-          <td>Row:7 Cell:1</td>
-          <td>Row:7 Cell:2</td>
-          <td>Row:7 Cell:3</td>
-          <td>Row:7 Cell:4</td>
-        </tr>
-        <tr>
-          <td>Row:8 Cell:1</td>
-          <td>Row:8 Cell:2</td>
-          <td>Row:8 Cell:3</td>
-          <td>Row:8 Cell:4</td>
-        </tr>
-        <tr>
-          <td>Row:9 Cell:1</td>
-          <td>Row:9 Cell:2</td>
-          <td>Row:9 Cell:3</td>
-          <td>Row:9 Cell:4</td>
-        </tr>
+
+<?php
+            }
+          }
+            $conn->close();
+?>
+            
+<!-- Removing the extra ?> that was here -->
+      
+       
       </tbody>
     </table>
   </div>

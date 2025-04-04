@@ -504,8 +504,17 @@ body {
 }
 
 /* Button styling */
+.dt-buttons-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  flex: 1;
+}
+
 .dt-buttons {
   margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
 }
 
 .dt-buttons button {
@@ -597,18 +606,45 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 15px;
+  width: 100%;
 }
 
 .dt-length {
   order: 1;
+  flex: 0 0 25%;
 }
 
 .dt-search {
-  order: 3; /* Push search to the right */
+  order: 3;
+  flex: 0 0 25%;
+  text-align: right;
+}
+
+.dt-buttons-container {
+  display: flex;
+  justify-content: center;
+  order: 2;
+  flex: 0 0 50%;
 }
 
 .dt-buttons {
-  order: 2; /* Keep buttons in the middle */
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.dt-buttons button {
+  margin-right: 5px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  background-color: #32129a;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.dt-buttons button:hover {
+  background-color: #260e77;
 }
 
 /* Make the search input look nicer */
@@ -694,4 +730,5 @@ body {
 .datatable-container table.dataTable tr:hover td {
   background-color: #d9d9d9;
 }
+
 

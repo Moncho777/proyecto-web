@@ -1,3 +1,13 @@
+<?php
+include("../src/pages/conexion.php");
+$id=$_REQUEST['id'];
+$sql = "SELECT * FROM convenios where id=".$id;
+$resultado = $conn->query($sql);
+$fila = $resultado->fetch_assoc();
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -76,18 +86,18 @@
             <div class="flex flex-row">
                 <!-- Logo de la empresa -->
                 <div class="company-logo-container">
-                    <img src="assets/images/logo/Oracle-Symbol.png" alt="Oracle Logo" class="company-logo">
+                    <img src='<?php echo "../src/pages/".str_replace("../", "", $fila["logo"]); ?>' alt="Oracle Logo" class="company-logo">
                 </div>
                 
                 <div class="company-info">
-                    <h2 class="company-title">Oracle Mexico</h2>
+                    <h2 class="company-title"><?php echo $fila['nombre'];?></h2>
                     
                     <div class="company-details">
-                        <p><strong>Correo:</strong></p>
-                        <p><strong>Contacto:</strong></p>
-                        <p><strong>Teléfono:</strong></p>
-                        <p><strong>Ubicación:</strong></p>
-                        <P><strong>Fecha de vencimiento:</strong></P>
+                        <p><strong>Correo:<?php echo $fila['correo'];?></strong></p>
+                        <p><strong>Contacto:<?php echo $fila['contacto'];?></strong></p>
+                        <p><strong>Teléfono:<?php echo $fila['telefono'];?></strong></p>
+                        
+                        <P><strong>Fecha de vencimiento:<?php echo date('d/m/Y', strtotime($fila['vencimiento']));?></strong></P>
                     </div>
                     
                     <!-- Redes sociales -->
