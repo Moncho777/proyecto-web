@@ -105,7 +105,7 @@ $resultado = $conn->query($sql);
           </a>
       </div>
       <div class="footer-text-links flex flex-col items-center gap-2">
-          <a href="/index.html" class="footer-link">Modulo de convenios</a>
+          <a href="../index.php" class="footer-link">Modulo de convenios</a>
           <a href="https://consultapublicamx.plataformadetransparencia.org.mx/vut-web/faces/view/consultaPublica.xhtml?idEntidad=MTQ=&idSujetoObligado=MTM3OTE=#inicio" class="footer-link">Plataforma Nacional de Transparencia</a>
       </div>
   </div>

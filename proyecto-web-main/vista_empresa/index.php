@@ -103,21 +103,45 @@ $fila = $resultado->fetch_assoc();
                     <!-- Redes sociales -->
                     <div class="social-links">
                         <div class="flex items-center gap-4">
-                            <a href="https://www.oracle.com/mx/" class="social-icon-link" title="Enlace" target="_blank">
+                            <?php if(!empty($fila['web'])): ?>
+                            <a href="<?php echo $fila['web']; ?>" class="social-icon-link" title="Enlace" target="_blank">
                                 <img src="assets/images/logo/link-svgrepo-com.svg" alt="Enlace" class="social-icon">
                             </a>
-                            <a href="https://www.facebook.com/OracleMexico" class="social-icon-link" title="Facebook" target="_blank">
+                            <?php else: ?>
+                            <a href="404.html" class="social-icon-link" title="Enlace no disponible">
+                                <img src="assets/images/logo/link-svgrepo-com.svg" alt="Enlace" class="social-icon opacity-50">
+                            </a>
+                            <?php endif; ?>
+                            
+                            <?php if(!empty($fila['facebook'])): ?>
+                            <a href="<?php echo $fila['facebook']; ?>" class="social-icon-link" title="Facebook" target="_blank">
                                 <img src="assets/images/logo/facebook-color-svgrepo-com.svg" alt="Facebook" class="social-icon">
                             </a>
-                            <a href="https://www.instagram.com/oracle" class="social-icon-link" title="Instagram" target="_blank">
-                                <img src="assets/images/logo/instagram-1-svgrepo-com.svg" alt="Instagram" class="social-icon">
+                            <?php else: ?>
+                            <a href="404.html" class="social-icon-link" title="Facebook no disponible">
+                                <img src="assets/images/logo/facebook-color-svgrepo-com.svg" alt="Facebook" class="social-icon opacity-50">
                             </a>
-                            <a href="https://twitter.com/oracle" class="social-icon-link" title="Twitter" target="_blank">
+                            <?php endif; ?>
+                            
+                            <?php if(!empty($fila['twitter'])): ?>
+                            <a href="<?php echo $fila['twitter']; ?>" class="social-icon-link" title="Twitter" target="_blank">
                                 <img src="assets/images/logo/icons8-x.svg" alt="Twitter" class="social-icon">
                             </a>
-                            <a href="https://www.youtube.com/oracle" class="social-icon-link" title="YouTube" target="_blank">
+                            <?php else: ?>
+                            <a href="404.html" class="social-icon-link" title="Twitter no disponible">
+                                <img src="assets/images/logo/icons8-x.svg" alt="Twitter" class="social-icon opacity-50">
+                            </a>
+                            <?php endif; ?>
+                            
+                            <?php if(!empty($fila['youtube'])): ?>
+                            <a href="<?php echo $fila['youtube']; ?>" class="social-icon-link" title="YouTube" target="_blank">
                                 <img src="assets/images/logo/youtube-168-svgrepo-com.svg" alt="YouTube" class="social-icon">
                             </a>
+                            <?php else: ?>
+                            <a href="404.html" class="social-icon-link" title="YouTube no disponible">
+                                <img src="assets/images/logo/youtube-168-svgrepo-com.svg" alt="YouTube" class="social-icon opacity-50">
+                            </a>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
@@ -129,7 +153,7 @@ $fila = $resultado->fetch_assoc();
         <div class="footer-container flex justify-between items-center">
             <div class="footer-img"> <img src="assets/images/logo/Grupo_10491.svg" alt="Footer Image 1" loading="lazy" /> </div>
             <div class="footer-links flex gap-4"> <a href="https://www.facebook.com/TecSJ " class="footer-img " target="_blank"> <img src="assets/images/logo/facebook-svgrepo-com.svg" alt="Facebook Link" loading="lazy" /> </a> <a href="https://www.youtube.com/@TecSJ" class="footer-img" target="_blank"> <img src="assets/images/logo/youtube-svgrepo-com.svg" alt="YouTube Link" loading="lazy" /> </a> </div>
-            <div class="footer-text-links flex flex-col items-center gap-2"> <a href="../index.html" class="footer-link">Modulo de convenios</a> <a href="https://consultapublicamx.plataformadetransparencia.org.mx/vut-web/faces/view/consultaPublica.xhtml?idEntidad=MTQ=&idSujetoObligado=MTM3OTE=#inicio" class="footer-link">Plataforma Nacional de Transparencia</a> </div>
+            <div class="footer-text-links flex flex-col items-center gap-2"> <a href="../index.php" class="footer-link">Modulo de convenios</a> <a href="https://consultapublicamx.plataformadetransparencia.org.mx/vut-web/faces/view/consultaPublica.xhtml?idEntidad=MTQ=&idSujetoObligado=MTM3OTE=#inicio" class="footer-link">Plataforma Nacional de Transparencia</a> </div>
         </div>
     </div> <!-- Información Adicional -->
     <div class="extra-info w-full p-6 bg-gray-800 text-white text-center">
